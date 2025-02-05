@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Label Form</title>
+    <link rel="stylesheet" href="bookingparkingslot.css"> <!-- Link to your CSS file -->
+    <style>
+        .heading1 {
+            margin-bottom: 20px;
+            font-size: 30px;
+            color: rgb(249, 41, 22);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p class="heading1">your account is not registered. create account</p>
+        <form id="loginForm" action="createaccount.php" method="post">
+            <div class="form-group">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Email Address</label>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" name="password" required>
+                <label for="password">Password</label>
+            </div>
+            <div class="form-group">
+                <input type="password" id="confirmpassword" name="confirmpassword" required>
+                <label for="confirmpassword">Confirm Password</label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+
+</html>

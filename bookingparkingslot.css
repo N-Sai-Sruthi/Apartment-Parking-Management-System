@@ -1,0 +1,79 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 12px 12px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    background-color: transparent;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: 0.2s ease all;
+    color: #aaa;
+    font-size: 16px;
+    background-color: #fff;
+    padding: 0 4px;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 12px;
+    font-size: 12px;
+    color: #007bff;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.heading1{
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: rgb(249, 40, 17);
+}

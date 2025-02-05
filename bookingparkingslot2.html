@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Parking Slot</title>
+    <link rel="stylesheet" href="bookingparkingslot2.css">
+</head>
+<body>
+    <div>
+        <p id="heading2">Available Slots</p>
+        <div id="slots-container">
+            <!-- Dynamic buttons will be loaded here -->
+        </div>
+        <p>selected slot</p>
+        <form id="booking-form" action="bookslot.php" method="post">
+            <input id="selected-slot" name="slot_number" value="">
+            <input type="email" id="email" name="email" placeholder="Enter your email" class="emailid1" required>
+            <button type="submit" class="submitbutton1">Book Slot</button>
+        </form>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fetch available slots and populate buttons
+            fetch('fetchslots.php')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('slots-container').innerHTML = data;
+                });
+            
+            // Handle button clicks
+            document.getElementById('slots-container').addEventListener('click', function(event) {
+                if (event.target.classList.contains('slot-button')) {
+                    const slotNumber = event.target.getAttribute('data-slot');
+                    document.getElementById('selected-slot').value = slotNumber;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

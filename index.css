@@ -1,0 +1,21 @@
+.heading2{
+    text-align: center;
+    margin-top: 40px;
+}
+/*body{
+    background-image: url('carparkingimage3.jpeg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+}*/
+.container1{
+    text-align: center;
+    margin-top: 40vh;
+}
+.container2{
+    display: inline-flex;
+}
+.button1{
+    margin-left: 20px;
+    margin-right: 20px; 
+}
